@@ -1,0 +1,86 @@
+body {
+	background-image: linear-gradient(#2b314f, #29304e);
+	color: #fff;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+.main__grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+	.main__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.main__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.moneda {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	background-color: #404b70;
+	border-radius: 10px;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.moneda:last-child {
+	margin-bottom: 40px;
+}
+
+.moneda .img {
+	grid-column: 1 / 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.moneda .img img {
+	width: 60px;
+	margin: 10px;
+}
+
+.nombres {
+	display: flex;
+	flex-direction: column;
+}
+.moneda .nombre,
+.moneda .nombre__corto {
+	grid-column: 2 / 3;
+}
+
+.precios {
+	display: flex;
+	flex-direction: column;
+}
+.moneda .precio,
+.moneda .precio__variacion {
+	grid-column: 3 / 4;
+}
+
+.footer {
+	background-color: #404b70;
+	text-align: center;
+	padding: 30px;
+}
+
+.footer a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+.footer a:hover {
+	color: #0ac18e;
+}
